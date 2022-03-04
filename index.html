@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="main">
+		<canvas width="600" height="600"></canvas>
+	</div>
+
+
+	<script type="text/javascript">
+		let canvas = document.querySelector('canvas');
+		let context = canvas.getContext('2d');
+
+		// context.fillStyle = '#fff';
+		// context.fillRect(100, 100, 400, 400);
+
+		// context.beginPath();
+		// context.lineWidth = '2px';
+		// context.rect(100, 100, 400, 400);
+		// context.stroke()
+
+
+		// context.beginPath();
+		// context.arc(300, 300, 100, 0, Math.PI * 2);
+		// context.stroke();
+
+		for(let i=0; i <6; i++) {
+			for(let j=0; j<6; j++) {
+				let width = 50;
+				let height = 50;
+				let gap = 20;
+				let x = 100 + (width+gap) *i;
+				let y = 100+(height+gap)*j;
+
+				context.beginPath();
+				context.fillStyle = "#f5f5f5";
+				context.fillRect(x, y, width, height);
+				context.stroke();
+
+				if (Math.random() > 0.5) {
+				context.lineWidth = "4px";
+				context.beginPath();
+				context.fillStyle = "#1c1c1c";
+				context.fillRect(x+10, y+10, width-20, height-20);
+				context.stroke();
+				}
+			}
+		}
+
+	</script>
+</body>
+</html>

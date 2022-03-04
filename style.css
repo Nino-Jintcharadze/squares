@@ -1,0 +1,11 @@
+body {
+	background-color: #1c1c1c;
+}
+canvas {
+	width: 100%;
+}
+
+.main {
+	max-width: 600px;
+	margin: 0 auto 0 auto;
+}
